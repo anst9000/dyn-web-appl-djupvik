@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=2"
+    />
+    <meta
+      name="description"
+      content="Contact information and reservation from to find out more and reserve your place at Djupviks Hamn."
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/djupvik.css" />
+    <link rel="icon" href="../assets/images/logos/favicon.ico" type="image/ico" />
+    <title>Kontakt - Djupviks Hamn</title>
+  </head>
+  <body>
+    <div id="container">
+      <aside>
+        <header>
+          <img src="../assets/images/logos/anchor.png" alt="Logo" />
+          <h1>Djupviks Hamn</h1>
+        </header>
+
+        <nav>
+          <ul>
+            <li><a href="../index.html">Hemsida</a></li>
+            <li><a href="#">Gästplatser</a></li>
+            <li><a href="attractions.html">Turistmål</a></li>
+            <li><a href="contact.html" id="activePage">Kontakt</a></li>
+            <li><a href="members.html">Medlemmar</a></li>
+            <li><a href="history.html">Historia</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main>
+        <img
+          src="../assets/images/small/D-16-sm.png"
+          alt="Hus i Djupviks hamn"
+          width="739"
+          height="490"
+        />
+
+        <section>
+          <h2>Kontaktformulär</h2>
+
+          <h3>Tveka inte att kontakta oss.</h3>
+
+          <p>Fält markerade med * måste fyllas i.</p>
+
+<!--
+          Kontaktformulär
+          Sånt vi vill få in svar på är:
+
+          - Rubrik för ärendet.
+          - Beskrivning utav ärendet.
+          - Val om vad det gäller (Båtplats, Medlem eller Övrigt).
+          - Hur man vill bli kontaktad (mail, telefon eller inte alls)
+          - Telefon
+          - Mail
+ -->
+          <form method="post" action="thanks.html">
+            <p>
+              <label for="FirstName">Förnamn*:</label>
+              <input type="text" name="firstName" id="FirstName" required />
+            </p>
+            <p>
+              <label for="LastName">Efternamn*:</label>
+              <input type="text" name="lastName" id="LastName" required />
+            </p>
+            <p>
+              <label for="Heading">Ärenderubrik*:</label>
+              <input type="text" name="heading" id="Heading" required />
+            </p>
+            <p>
+              <label for="Description">Beskrivning*:</label>
+              <textarea
+                name="description"
+                id="Description"
+                cols="30"
+                rows="5"
+                required
+              ></textarea>
+            </p>
+            <p>
+              <label for="Email">E-post*:</label>
+              <input
+                type="email"
+                name="email"
+                id="Email"
+                required
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+              />
+            </p>
+            <p>
+              <label for="Phone">Telefon:</label>
+              <input
+                type="tel"
+                name="phone"
+                id="Phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              />
+            </p>
+            <!--
+              Val om vad det gäller (Båtplats, Medlem eller Övrigt).
+              Hur man vill bli kontaktad (mail, telefon eller inte alls)
+            -->
+            <p>
+              <label for="Type">Typ av ärende:</label>
+              <select name="type" id="Type">
+                <option value="mooring">Båtplats</option>
+                <option value="member">Medlem</option>
+                <option value="misc">Övrigt</option>
+              </select>
+            </p>
+            <p>
+              <label for="Contact">Hur vill du ha svar:</label>
+              <select name="contact" id="Contact">
+                <option value="email">E-post</option>
+                <option value="phone">Telefon</option>
+                <option value="no-contact">Ingen kontakt</option>
+              </select>
+            </p>
+            <p class="buttons">
+              <input type="submit" value="Skicka" />
+              <input type="reset" value="Töm alla fält" />
+            </p>
+          </form>
+
+        </section>
+
+        <footer>
+          <p>
+            &copy; Copyright Djupvikshamn.se</br><a href="mailto:info@djupvikshamn.se">info@djupvikshamn.se</a>
+          </p>
+        </footer>
+      </main>
+    </div>
+    <!-- END OF CONTAINER -->
+  </body>
+</html>

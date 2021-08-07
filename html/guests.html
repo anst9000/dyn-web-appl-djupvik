@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=2"
+    />
+    <meta
+      name="description"
+      content="Explanations of Yurts - what it is, how they are furnished and the different packages (with pricelist) that Djupviks Hamn offers."
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/djupvik.css" />
+    <link rel="icon" href="../assets/images/logos/favicon.ico" type="image/ico" />
+    <title>Yurt - Djupviks Hamn</title>
+  </head>
+  <body>
+    <div id="container">
+      <aside>
+        <header>
+          <img src="../assets/images/logos/anchor.png" alt="Logo" />
+          <h1>Djupviks<br>Hamn</h1>
+        </header>
+
+        <nav>
+          <ul>
+            <li><a href="../index.html">Hemsida</a></li>
+            <li><a href="#" id="activePage">Gästplatser</a></li>
+            <li><a href="attractions.html">Turistmål</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="members.html">Medlemmar</a></li>
+            <li><a href="history.html">Historia</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main>
+        <img
+          id="guests-lg"
+          src="../assets/images/small/D-12-md.png"
+          alt="Gästhamnen i Djupviks hamn"
+          width="1232"
+          height="816"
+        />
+        <img
+          id="guests-sm"
+          src="../assets/images/small/D-12-xs.png"
+          alt="Gästhamnen i Djupviks hamn"
+          width="616"
+          height="408"
+        />
+
+        <section>
+          <h2>Gästhamnen</h2>
+
+          <p>
+            Vi älskar besökare och har därför samlat information om vår fina gästhamn.
+            Längre ner finner du också en väderprognos som uppdateras regelbundet med de senaste prognoserna.
+          </p>
+
+          <!-- <img
+            src="../assets/images/Treebones_Yurt_small.jpg"
+            alt="Yurt with a view over the Pacific Ocean"
+            width="403"
+            height="266"
+          /> -->
+
+          <article>
+            <h3>Gästbåtar är hjärtligt välkomna!</h3>
+            <p>
+              Vid normalvattendjup är djupet 3 meter i huvuddelen av hamnen.
+              Vatten och el finns utdraget på kajerna.
+              I land kan vi erbjuda ett modernt servicehus med WC, dusch och tvättmaskin.
+            </p>
+            <p>
+              Ring gärna hamnfogden för att få reda på aktuellt läge.
+            </p>
+
+            <table id="table-guests">
+              <thead>
+                <tr>
+                  <th id="Description">Beskrivning</th>
+                  <th id="Cost">Kostnad/dygn</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td headers="Description">
+                    Plats i gästhamnen
+                  </td>
+                  <td headers="Cost">150:-*</td>
+                </tr>
+                <tr>
+                  <td headers="Description">
+                    El-anslutning
+                  </td>
+                  <td headers="Cost">50:-</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              <small>*inkluderat kort för tillträde till servicehuset och 20:- för två duschar</small>
+            </p>
+            <p>
+              Hamnfogde Bo Lautin Mobil 0707 - 92 03 10
+            </p>
+          </article>
+
+          <article>
+            <h3>Väderprognos</h3>
+<!--
+            <table id="table-weather">
+              <thead>
+                <tr>
+                  <th id="Time">Prognos för</th>
+                  <th id="Temperature">Temperatur</th>
+                  <th id="Wind">Vind</th>
+                  <th id="Symbol">Symbol</th>
+                </tr>
+              </thead>
+              <tbody id="table-body-weather">
+              </table>
+            </table>
+ -->
+            <p>
+              <label for="select-weather">Väderprognoser</label>
+              <select name="select-weather-forecast" id="select-weather" required>
+                <!-- <option value="" disabled selected="true" data-default>Välj en prognos</option> -->
+                <option value="default" selected disabled>Välj en prognos</option>
+
+              <!--
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+              -->
+
+              </select>
+            </p>
+
+            <section id="show-weather-forecast">
+              <h4><span>Välj en tidpunkt ovan</span></h4>
+              <p><img src="../assets/images/wxIcons/wx_types.jpg" width="230" height="219" alt="Vädersymboler" /></p>
+            </section>
+
+            <hr />
+            <p>
+              Aktuella väderprognoser uppdateras varje timma.
+              Hämtas från smhi.se för Djupviks Hamn.
+            </p>
+
+            <p>
+              Longitud 18.1489&#176;N</br>
+              Latitud 57.3081&#176;E
+            </p>
+
+          </article>
+
+        </section>
+        <footer>
+          <p>
+            &copy; Copyright Djupvikshamn.se</br><a href="mailto:info@djupvikshamn.se">info@djupvikshamn.se</a>
+          </p>
+        </footer>
+      </main>
+    </div>
+    <!-- END OF CONTAINER -->
+    <script src="../js/weather.js" type="module"></script>
+  </body>
+</html>
+
+<!-- Kommentar till dig som utvecklar sajten:
+Tillsammans med informationen om Gästhamnen vore det bra med någon slags information om vädret.  -->
+

@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url(../font/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Open Sans light";
+  src: url(../font/OpenSans-Light.ttf);
+}
+
+html {
+  font-size: 105%;
+}
+
+body {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #262014;
+}
+
+#container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 20% 80%;
+}
+
+h1, h2, h3 {
+  font-family: "Open Sans light";
+}
+
+h2, h2 {
+  color: #5687a6;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 4rem 0 2rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 2;
+  margin-bottom: 1.8rem;
+}
+
+aside {
+  background-color: #5687a6;
+  grid-row: 1/2;
+}
+
+main {
+  grid-row: 1/2;
+}
+
+header {
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+img[alt="Logo"] {
+  width: 20%;
+}
+
+/* NAV */
+nav ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.9rem;
+}
+
+nav ul li {
+  width: 60%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:focus, nav a:hover, nav a:active {
+  color: #f29829;
+}
+
+nav a:focus {
+  outline: none;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+article {
+  width: 50%;
+  float: left;
+  margin: 0 2rem 4rem 0;
+}
+
+article ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  line-height: 2;
+}
+
+footer {
+  clear: both;
+}

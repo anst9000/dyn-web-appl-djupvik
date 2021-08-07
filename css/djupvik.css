@@ -1,0 +1,518 @@
+@font-face {
+  font-family:"Open Sans";
+  src:url(../assets/font/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family:"Open Sans light";
+  src:url(../assets/font/OpenSans-Light.ttf);
+}
+
+@font-face {
+  font-family:"Roboto Medium";
+  src:url(../assets/font/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family:"Roboto Bold";
+  src:url(../assets/font/Roboto-Bold.ttf);
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  color: #170200;
+}
+
+#container {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Open Sans light";
+}
+
+h2,
+h3 {
+  color: rgb(30, 14, 0);
+}
+
+h1 {
+  font-size: 2.0rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin: 2rem 0 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  padding-top: 1.8rem;
+}
+
+p {
+  line-height: 1.5;
+  margin: 1.8rem 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin-bottom: 1rem;
+}
+
+figcaption {
+  font-size: 0.8rem;
+}
+
+#main-sm {display:block;}
+#main-lg {display:none}
+#guests-lg {display:none}
+
+
+aside {
+  /* height: 100vh; */
+  background-color: #d08b2c;
+  border-right: 1px solid rgb(30, 14, 0);
+}
+
+header {
+  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 auto;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  font-family: "Roboto Medium";
+  color: #e3e3e3;
+}
+
+header h2 {
+  margin: 0 auto;
+  letter-spacing: 1px;
+}
+
+img[alt="Logo"] {
+  width: 25%;
+}
+
+/* NAV */
+nav {
+  /* margin-bottom: 5rem; */
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+nav ul li {
+  width: 40%;
+  padding: 0.75rem;
+  margin: 0 auto;
+}
+
+nav ul li:last-child {
+  margin-bottom: 2rem;
+}
+
+nav a {
+  font-family: "Roboto Bold";
+  color: rgb(30, 14, 0);
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  font-size: 1.25rem;
+}
+
+nav a:focus,
+nav a:hover,
+nav a:active {
+  font-family: "Roboto Bold";
+  color: rgb(60, 44, 30);
+  letter-spacing: 0.1rem;
+}
+
+nav a:focus {
+  outline: none;
+}
+
+#activePage {
+  /* color: #ffd700;
+  color: rgb(227, 212, 225); */
+  font-family: "Roboto Bold";
+  color: rgb(30, 14, 0);
+  border-bottom: 4px solid rgb(30, 14, 0);
+}
+
+main {
+  width: 100vw;
+}
+
+article#english {
+  display: none;
+}
+
+article#swedish {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  background-color: #d08b2c;
+  color: rgb(30, 14, 0);;
+  border: 1px solid rgb(30, 14, 0);;
+}
+
+button:hover {
+  background-color: #c07b1c;
+}
+
+button:active {
+  background-color: #c07b1c;
+  width: 57px;
+  height: 27px;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+article header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 3fr 1fr;
+}
+
+article ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  line-height: 1.5;
+}
+
+footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding: 0.75rem;
+  background-color: #d08b2c;
+}
+
+footer p {
+  margin-bottom: 0rem;
+}
+
+.gallery {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.gallery img {
+  width: 20%;
+}
+
+video {
+  display: block;
+  float: right;
+}
+
+video:focus {
+  outline: 4px solid #006599;
+}
+
+/* Tabellen på yurt-sidan */
+table {
+  width: 100%;
+  max-width: 600px;
+}
+
+td,
+th {
+  border: 1px solid #006599;
+  padding: 0.3rem;
+}
+
+th {
+  /* font-weight: bold; */
+  background-color: #6aa6cc;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: #f5fafc;
+}
+
+/* Formulärets stil */
+input,
+select,
+textarea {
+  border: 1px solid #006599;
+  color: #000;
+  font-size: 1.3rem;
+  width: 90%;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background-color: #006599;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  background-color: #90c7e3;
+}
+
+@media (min-width: 620px) and (max-width: 1020px) {
+  #container {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 30% 70%;
+  }
+
+  video {
+    display: block;
+    float: right;
+  }
+
+  video:focus {
+    outline: 4px solid #006599;
+  }
+
+  video + img {
+    display: none;
+  }
+}
+
+@media (min-width: 1021px) {
+  #container {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 20% 80%;
+  }
+
+  article {
+    width: 50%;
+    float: left;
+    margin: 0 2rem 4rem 0;
+  }
+
+  footer {
+    clear: both;
+  }
+  video {
+    display: block;
+  }
+  video + img {
+    display: none;
+  }
+
+  label {
+    width: 8rem;
+    float: left;
+    text-align: right;
+    margin-right: 0.6em;
+    font-size: 1.2rem;
+  }
+
+  .buttons {
+    display: flex;
+    width: 75%;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 50%;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    margin-left: 2rem;
+  }
+  input[type="submit"] {
+    margin-left: 8.5rem;
+  }
+}
+
+@media (max-width: 780px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #table-guests tr {
+    border: 1px solid #3399cc;
+  }
+  #table-guests td {
+    position: relative;
+    padding-left: 50%;
+  }
+
+  #table-guests td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: no-wrap;
+    /* font-weight: bold; */
+    text-align: left;
+  }
+
+  #table-guests td:nth-of-type(1):before {
+    content: "Beskrivning";
+  }
+  #table-guests td:nth-of-type(2):before {
+    content: "Kostnad/dygn";
+  }
+
+  section #show-weather-forecast {
+    max-width: 90%;
+    box-shadow: 2px 2px 10px grey;
+    background-color: #f1f1f1;
+    margin: 1rem auto 2rem auto;
+    padding-top: 1.5rem;
+  }
+
+  section #show-weather-forecast h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+  section #show-weather-forecast p {
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+  }
+
+  section #show-weather-forecast span {
+    font-weight: bold;
+  }
+
+  .attraction-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .attraction-list li {
+    padding: 5px 10px;
+    background-color: #EEEEEE;
+    border: 1px solid #DDDDDD;
+  }
+
+  .history {
+    font-style: italic;
+  }
+
+  h4 span {
+    font-weight: bold;
+  }
+
+  #name-explanation {
+    margin-top: 0.75rem;
+
+    width: 100%;
+    box-shadow: 2px 2px 10px grey;
+    background-color: #f1f1f1;
+    /* margin: 1rem auto 2rem auto; */
+    /* padding-top: 1.5rem; */
+  }
+  #name-explanation ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #name-explanation ul  li {
+    padding: 5px 10px;
+    background-color: #EEEEEE;
+    border: 1px solid #DDDDDD;
+  }
+
+
+
+
+
+  /* #table-weather tr {
+    border: 1px solid #3399cc;
+  }
+  #table-weather td {
+    position: relative;
+    padding-left: 50%;
+  }
+
+  #table-weather td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: no-wrap;
+
+    text-align: left;
+  }
+
+  #table-weather td:nth-of-type(1):before {
+    content: "Prognos för";
+  }
+  #table-weather td:nth-of-type(2):before {
+    content: "Temperatur";
+  }
+  #table-weather td:nth-of-type(3):before {
+    content: "Vind";
+  }
+  #table-weather td:nth-of-type(4):before {
+    content: "Symbol";
+  }
+
+  #table-weather img {
+    width: 50px;
+    height: 50px;
+  }
+*/
+
+  p small {
+    font-size: 0.75rem;
+  }
+}
