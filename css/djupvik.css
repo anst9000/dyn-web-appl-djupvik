@@ -224,47 +224,111 @@ footer p {
   margin-bottom: 0rem;
 }
 
-.gallery {
-  position: relative;
-  margin-bottom: 1rem;
+p small {
+  font-size: 0.75rem;
 }
 
-.gallery img {
-  width: 20%;
-}
-
-video {
-  display: block;
-  float: right;
-}
-
-video:focus {
-  outline: 4px solid #006599;
-}
-
-/* Tabellen på yurt-sidan */
-table {
-  width: 100%;
-  max-width: 600px;
-}
-
+table,
+thead,
+tbody,
+th,
 td,
-th {
-  border: 1px solid #006599;
-  padding: 0.3rem;
+tr {
+  display: block;
 }
 
-th {
+thead tr {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+#table-guests tr {
+  border: 1px solid #3399cc;
+}
+#table-guests td {
+  position: relative;
+  padding-left: 50%;
+}
+
+#table-guests td:before {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 45%;
+  padding-right: 10px;
+  white-space: no-wrap;
   /* font-weight: bold; */
-  background-color: #6aa6cc;
+  text-align: left;
 }
 
-td {
-  text-align: center;
+#table-guests td:nth-of-type(1):before {
+  content: "Beskrivning";
+}
+#table-guests td:nth-of-type(2):before {
+  content: "Kostnad/dygn";
 }
 
-tr:nth-of-type(even) {
-  background-color: #f5fafc;
+section #show-weather-forecast {
+  max-width: 90%;
+  box-shadow: 2px 2px 10px grey;
+  background-color: #f1f1f1;
+  margin: 1rem auto 2rem auto;
+  padding-top: 1.5rem;
+}
+
+section #show-weather-forecast h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+section #show-weather-forecast p {
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+}
+
+section #show-weather-forecast span {
+  font-weight: bold;
+}
+
+.attraction-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.attraction-list li {
+  padding: 5px 10px;
+  background-color: #EEEEEE;
+  border: 1px solid #DDDDDD;
+}
+
+.history {
+  font-style: italic;
+}
+
+h4 span {
+  font-weight: bold;
+}
+
+#name-explanation {
+  margin-top: 0.75rem;
+
+  width: 100%;
+  box-shadow: 2px 2px 10px grey;
+  background-color: #f1f1f1;
+  /* margin: 1rem auto 2rem auto; */
+  /* padding-top: 1.5rem; */
+}
+#name-explanation ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#name-explanation ul  li {
+  padding: 5px 10px;
+  background-color: #EEEEEE;
+  border: 1px solid #DDDDDD;
 }
 
 /* Formulärets stil */
@@ -287,6 +351,31 @@ input[type="reset"] {
   width: 100%;
 }
 
+/* Tacksidans stil */
+#thanks {
+}
+
+#thanks ul {
+  margin-top: 0.75rem;
+  width: 100%;
+  box-shadow: 2px 2px 10px grey;
+  background-color: #f1f1f1;
+  list-style-type: none;
+  padding: 0;
+}
+
+#thanks ul  li {
+  padding: 5px 10px;
+  background-color: #EEEEEE;
+  border: 1px solid #DDDDDD;
+}
+
+#thanks ul  li span {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+
 input:focus,
 select:focus,
 textarea:focus {
@@ -301,17 +390,29 @@ textarea:focus {
     grid-template-columns: 30% 70%;
   }
 
-  video {
-    display: block;
-    float: right;
+  /* Tabellen på guest-sidan */
+  table {
+    width: 100%;
+    max-width: 600px;
   }
 
-  video:focus {
-    outline: 4px solid #006599;
+  td,
+  th {
+    border: 1px solid #006599;
+    padding: 0.3rem;
   }
 
-  video + img {
-    display: none;
+  th {
+    /* font-weight: bold; */
+    background-color: #6aa6cc;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  tr:nth-of-type(even) {
+    background-color: #f5fafc;
   }
 }
 
@@ -367,112 +468,11 @@ textarea:focus {
 }
 
 @media (max-width: 780px) {
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
-    display: block;
-  }
-
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-
-  #table-guests tr {
-    border: 1px solid #3399cc;
-  }
-  #table-guests td {
-    position: relative;
-    padding-left: 50%;
-  }
-
-  #table-guests td:before {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: no-wrap;
-    /* font-weight: bold; */
-    text-align: left;
-  }
-
-  #table-guests td:nth-of-type(1):before {
-    content: "Beskrivning";
-  }
-  #table-guests td:nth-of-type(2):before {
-    content: "Kostnad/dygn";
-  }
-
-  section #show-weather-forecast {
-    max-width: 90%;
-    box-shadow: 2px 2px 10px grey;
-    background-color: #f1f1f1;
-    margin: 1rem auto 2rem auto;
-    padding-top: 1.5rem;
-  }
-
-  section #show-weather-forecast h4 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
-  }
-  section #show-weather-forecast p {
-    font-size: 1.1rem;
-    margin: 0;
-    padding: 0 0 0 1.5rem;
-  }
-
-  section #show-weather-forecast span {
-    font-weight: bold;
-  }
-
-  .attraction-list {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .attraction-list li {
-    padding: 5px 10px;
-    background-color: #EEEEEE;
-    border: 1px solid #DDDDDD;
-  }
-
-  .history {
-    font-style: italic;
-  }
-
-  h4 span {
-    font-weight: bold;
-  }
-
-  #name-explanation {
-    margin-top: 0.75rem;
-
-    width: 100%;
-    box-shadow: 2px 2px 10px grey;
-    background-color: #f1f1f1;
-    /* margin: 1rem auto 2rem auto; */
-    /* padding-top: 1.5rem; */
-  }
-  #name-explanation ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  #name-explanation ul  li {
-    padding: 5px 10px;
-    background-color: #EEEEEE;
-    border: 1px solid #DDDDDD;
-  }
 
 
+}
 
-
+/* ----------------------------------------- */
 
   /* #table-weather tr {
     border: 1px solid #3399cc;
@@ -512,7 +512,26 @@ textarea:focus {
   }
 */
 
-  p small {
-    font-size: 0.75rem;
-  }
+
+/* video {
+  display: block;
+  float: right;
 }
+
+video:focus {
+  outline: 4px solid #006599;
+} */
+
+
+  /* video {
+    display: block;
+    float: right;
+  }
+
+  video:focus {
+    outline: 4px solid #006599;
+  }
+
+  video + img {
+    display: none;
+  } */

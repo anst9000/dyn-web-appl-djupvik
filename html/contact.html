@@ -62,7 +62,7 @@
           - Telefon
           - Mail
  -->
-          <form method="post" action="thanks.html">
+          <form id="contact-form" method="get" action="thanks.html">
             <p>
               <label for="FirstName">Förnamn*:</label>
               <input type="text" name="firstName" id="FirstName" required />
@@ -101,27 +101,26 @@
                 type="tel"
                 name="phone"
                 id="Phone"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                pattern="[0-9]{3}-[0-9]{7}"
               />
             </p>
-            <!--
-              Val om vad det gäller (Båtplats, Medlem eller Övrigt).
-              Hur man vill bli kontaktad (mail, telefon eller inte alls)
-            -->
+
             <p>
-              <label for="Type">Typ av ärende:</label>
+              <label for="Type">Ärendetyp:</label>
               <select name="type" id="Type">
-                <option value="mooring">Båtplats</option>
-                <option value="member">Medlem</option>
-                <option value="misc">Övrigt</option>
+                <option value="default" selected disabled>Välj typ av ärende</option>
+                <option value="Båtplats">Båtplats</option>
+                <option value="Medlem">Medlem</option>
+                <option value="Övrigt">Övrigt</option>
               </select>
             </p>
             <p>
-              <label for="Contact">Hur vill du ha svar:</label>
+              <label for="Contact">Kontaktform:</label>
               <select name="contact" id="Contact">
-                <option value="email">E-post</option>
-                <option value="phone">Telefon</option>
-                <option value="no-contact">Ingen kontakt</option>
+                <option value="default" selected disabled>Välj hur vi ska svara</option>
+                <option value="E-post">E-post</option>
+                <option value="Telefon">Telefon</option>
+                <option value="Ingen kontakt">Ingen kontakt</option>
               </select>
             </p>
             <p class="buttons">
