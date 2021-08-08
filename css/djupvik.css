@@ -62,25 +62,35 @@ h3 {
 
 p {
   line-height: 1.5;
-  margin: 1.8rem 0;
+  margin: 0 0 1.8rem 0;
 }
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 figure {
   margin-bottom: 1rem;
+  margin-left: 2rem;
 }
 
 figcaption {
   font-size: 0.8rem;
 }
 
-#main-sm {display:block;}
-#main-lg {display:none}
-#guests-lg {display:none}
-
+#main-img-sm {display:block;}
+#main-img-lg {display:none}
+#guests-img-sm {display:block;}
+#guests-img-lg {display:none}
+#attractions-img-sm {display:block;}
+#attractions-img-lg {display:none}
+#contact-img-sm {display:block;}
+#contact-img-lg {display:none}
+#members-img-sm {display:block;}
+#members-img-lg {display:none}
+#history-img-sm {display:block;}
+#history-img-lg {display:none}
 
 aside {
   /* height: 100vh; */
@@ -113,9 +123,6 @@ img[alt="Logo"] {
 }
 
 /* NAV */
-nav {
-  /* margin-bottom: 5rem; */
-}
 nav ul {
   display: flex;
   flex-direction: column;
@@ -161,7 +168,7 @@ nav a:focus {
 }
 
 main {
-  width: 100vw;
+  width: 100%;
 }
 
 article#english {
@@ -204,10 +211,9 @@ article header {
   grid-template-columns: 3fr 1fr;
 }
 
-article ul {
-  list-style-type: circle;
-  list-style-position: inside;
+ul {
   line-height: 1.5;
+  margin-bottom: 1rem;
 }
 
 footer {
@@ -226,50 +232,21 @@ footer p {
 
 p small {
   font-size: 0.75rem;
+  margin: 0;
 }
 
-table,
-thead,
-tbody,
-th,
-td,
-tr {
+table {
+  margin: 0 auto 3rem auto;
+}
+
+caption {
   display: block;
+  float: left;
+  font-size: 0.75rem;
+  margin-top: 0.75rem;
 }
 
-thead tr {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-
-#table-guests tr {
-  border: 1px solid #3399cc;
-}
-#table-guests td {
-  position: relative;
-  padding-left: 50%;
-}
-
-#table-guests td:before {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 45%;
-  padding-right: 10px;
-  white-space: no-wrap;
-  /* font-weight: bold; */
-  text-align: left;
-}
-
-#table-guests td:nth-of-type(1):before {
-  content: "Beskrivning";
-}
-#table-guests td:nth-of-type(2):before {
-  content: "Kostnad/dygn";
-}
-
-section #show-weather-forecast {
+#show-weather-forecast {
   max-width: 90%;
   box-shadow: 2px 2px 10px grey;
   background-color: #f1f1f1;
@@ -277,18 +254,18 @@ section #show-weather-forecast {
   padding-top: 1.5rem;
 }
 
-section #show-weather-forecast h4 {
+#show-weather-forecast h4 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
   padding-left: 1.5rem;
 }
-section #show-weather-forecast p {
+#show-weather-forecast p {
   font-size: 1.1rem;
   margin: 0;
   padding: 0 0 0 1.5rem;
 }
 
-section #show-weather-forecast span {
+#show-weather-forecast span {
   font-weight: bold;
 }
 
@@ -307,25 +284,28 @@ section #show-weather-forecast span {
   font-style: italic;
 }
 
+#history-image-konrad {
+  border: 1px dashed grey;
+}
+
 h4 span {
   font-weight: bold;
 }
 
-#name-explanation {
+#name-explanation, #harbor-master {
   margin-top: 0.75rem;
-
   width: 100%;
   box-shadow: 2px 2px 10px grey;
   background-color: #f1f1f1;
   /* margin: 1rem auto 2rem auto; */
   /* padding-top: 1.5rem; */
 }
-#name-explanation ul {
+#name-explanation ul, #harbor-master ul {
   list-style-type: none;
   padding: 0;
 }
 
-#name-explanation ul  li {
+#name-explanation ul li, #harbor-master ul li {
   padding: 5px 10px;
   background-color: #EEEEEE;
   border: 1px solid #DDDDDD;
@@ -348,10 +328,37 @@ input[type="reset"] {
   border: none;
   padding: 0.5rem 0.8rem;
   margin-bottom: 1rem;
-  width: 100%;
+  display: block;
+  /* width: 100%; */
 }
 
-/* Tacksidans stil */
+  table {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  td,
+  th {
+    border: 1px solid #006599;
+    padding: 0.3rem;
+  }
+
+  th {
+    /* font-weight: bold; */
+    background-color: #6aa6cc;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  tr:nth-of-type(even) {
+    background-color: #f5fafc;
+  }
+
+
+
+/* TACK-sidan */
 #thanks {
 }
 
@@ -383,11 +390,81 @@ textarea:focus {
   background-color: #90c7e3;
 }
 
+@media (min-width: 400px) {
+  #table-members td {
+    text-align: center;
+  }
+}
+
 @media (min-width: 620px) and (max-width: 1020px) {
   #container {
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: 30% 70%;
+  }
+
+  header {
+    margin-top: 1rem;
+  }
+
+  main {
+    margin: 0;
+    padding: 0;
+  }
+
+  #main-section {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    margin-top: 2rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin: 2rem 0 2rem;
+  }
+
+  h3 {
+    font-size: 2.0rem;
+    margin-bottom: 1rem;
+    padding-top: 1.8rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin: 1.8rem 0 1.8rem 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  figure {
+    margin-bottom: 1rem;
+  }
+
+  figcaption {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  article {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  article img {
+    text-align: center;
+    display: block;
+    margin: auto auto;
+  }
+
+  footer {
+    margin-top: 0;
   }
 
   /* Tabellen på guest-sidan */
@@ -416,27 +493,117 @@ textarea:focus {
   }
 }
 
+@media (min-width: 830px) {
+  #main-img-sm {display:none;}
+  #main-img-lg {display:block}
+  #guests-img-sm {display:none;}
+  #guests-img-lg {display:block}
+  #attractions-img-sm {display:none;}
+  #attractions-img-lg {display:block}
+  #contact-img-sm {display:none;}
+  #contact-img-lg {display:block}
+  #members-img-sm {display:none;}
+  #members-img-lg {display:block}
+  #history-img-sm {display:none;}
+  #history-img-lg {display:block}
+
+  #table-guests {
+    width: 75%;
+  }
+
+}
+
+@media (max-width: 830px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  th {
+    /* font-weight: bold; */
+    background-color: #6aa6cc;
+    border: 1px solid #006599;
+    padding: 0.3rem;
+  }
+
+  tr {
+    border: 1px solid #3399cc;
+  }
+
+  #table-guests {
+    width: 90%;
+  }
+
+  #table-guests td {
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+    border: 1px solid #006599;
+    padding: 0.3rem;
+  }
+
+  #table-guests td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: no-wrap;
+    text-align: left;
+  }
+
+  #table-guests td:nth-of-type(1):before {
+    content: "Beskrivning";
+  }
+  #table-guests td:nth-of-type(2):before {
+    content: "Kostnad/dygn";
+  }
+
+  /* MEDLEMMAR-sidan */
+  #table-members tr:nth-of-type(even) {
+    background-color: #f5fafc;
+  }
+
+  #table-members td:nth-of-type(1):before {
+    content: "Namn";
+  }
+  #table-members td:nth-of-type(2):before {
+    content: "E-post";
+  }
+  #table-members td:nth-of-type(3):before {
+    content: "Telefon";
+  }
+
+  #table-members img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 @media (min-width: 1021px) {
   #container {
     display: grid;
     grid-template-rows: 100%;
-    grid-template-columns: 20% 80%;
-  }
-
-  article {
-    width: 50%;
-    float: left;
-    margin: 0 2rem 4rem 0;
+    grid-template-columns: 25% 75%;
   }
 
   footer {
     clear: both;
   }
-  video {
-    display: block;
-  }
-  video + img {
-    display: none;
+
+  nav a {
+    letter-spacing: 1.5px;
+    font-size: 1.4rem;
   }
 
   label {
@@ -465,73 +632,56 @@ textarea:focus {
   input[type="submit"] {
     margin-left: 8.5rem;
   }
-}
 
-@media (max-width: 780px) {
-
-
-}
-
-/* ----------------------------------------- */
-
-  /* #table-weather tr {
-    border: 1px solid #3399cc;
-  }
-  #table-weather td {
-    position: relative;
-    padding-left: 50%;
+  h1 {
+    font-size: 2.6rem;
+    margin-top: 2.2rem;
   }
 
-  #table-weather td:before {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: no-wrap;
-
-    text-align: left;
+  h2 {
+    font-size: 2.4rem;
+    margin: 2rem 0;
   }
 
-  #table-weather td:nth-of-type(1):before {
-    content: "Prognos för";
-  }
-  #table-weather td:nth-of-type(2):before {
-    content: "Temperatur";
-  }
-  #table-weather td:nth-of-type(3):before {
-    content: "Vind";
-  }
-  #table-weather td:nth-of-type(4):before {
-    content: "Symbol";
+  h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    padding-top: 1.8rem;
   }
 
-  #table-weather img {
-    width: 50px;
-    height: 50px;
+  p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin: 1.8rem 0 1.8rem 0;
   }
-*/
 
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 
-/* video {
-  display: block;
-  float: right;
-}
+  figure {
+    margin-bottom: 1rem;
+  }
 
-video:focus {
-  outline: 4px solid #006599;
-} */
+  figcaption {
+    font-size: 0.8rem;
+    text-align: center;
+  }
 
-
-  /* video {
+  article img {
+    text-align: center;
     display: block;
-    float: right;
+    margin: auto auto;
   }
 
-  video:focus {
-    outline: 4px solid #006599;
+  th {
+    font-weight: bold;
+    font-size: 1.25rem;
   }
 
-  video + img {
-    display: none;
-  } */
+  td {
+    font-size: 1.1rem;
+  }
+
+}
