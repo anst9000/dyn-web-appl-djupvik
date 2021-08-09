@@ -246,6 +246,10 @@ footer p {
   margin-bottom: 0rem;
 }
 
+footer p a {
+  color: 0F0024;
+}
+
 p small {
   font-size: 0.75rem;
   margin: 0;
