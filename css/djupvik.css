@@ -54,7 +54,7 @@ h2 {
 
 h3 {
   font-size: 1.6rem;
-  margin: 1.5rem 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -204,9 +204,14 @@ section {
   margin: 0 auto;
 }
 
+article {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+
 article header {
   display: grid;
-  align-items: center;
   grid-template-columns: 3fr 1fr;
   align-items: center;
   margin: 0;
@@ -431,6 +436,15 @@ textarea:focus {
     grid-template-columns: 30% 70%;
   }
 
+  article header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+
   header {
     margin-top: 1rem;
   }
@@ -630,6 +644,14 @@ textarea:focus {
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: 25% 75%;
+  }
+
+  article header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    margin: 0;
+    padding: 0;
   }
 
   footer {
