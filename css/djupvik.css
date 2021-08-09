@@ -206,16 +206,28 @@ section {
 
 article {
   width: 100%;
-  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 
+.header-h3 {
+  grid-area: h3;
+}
+
+.header-button {
+  grid-area: button;
+  margin: 0 auto 1.25rem;
+}
 
 article header {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+      ". button ."
+      "h3 h3 h3";
   align-items: center;
   margin: 0;
   padding: 0;
+  margin-bottom: 2rem;
 }
 
 ul {
@@ -436,15 +448,6 @@ textarea:focus {
     grid-template-columns: 30% 70%;
   }
 
-  article header {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-
-
   header {
     margin-top: 1rem;
   }
@@ -646,14 +649,6 @@ textarea:focus {
     grid-template-columns: 25% 75%;
   }
 
-  article header {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-
   footer {
     clear: both;
   }
@@ -703,7 +698,6 @@ textarea:focus {
   h3 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
-    padding-top: 1.8rem;
   }
 
   p {
