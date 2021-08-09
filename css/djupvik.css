@@ -91,7 +91,6 @@ figcaption {
 #history-img-lg {display:none}
 
 aside {
-  /* height: 100vh; */
   background-color: #d08b2c;
   border-right: 1px solid rgb(30, 14, 0);
 }
@@ -105,10 +104,10 @@ header {
 header h1 {
   margin: 0 auto;
   font-size: 2.5rem;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   line-height: 1.2;
   font-family: "Roboto Medium";
-  color: #e3e3e3;
+  color: rgb(30, 14, 0);
 }
 
 header h2 {
@@ -116,10 +115,9 @@ header h2 {
   letter-spacing: 1px;
 }
 
-img[alt="Logo"] {
-  width: 25%;
+header img {
+  width: 40%;
 }
-
 
 a:focus, a:hover {
   outline: 1px solid black;
@@ -431,13 +429,18 @@ input[type="reset"] {
 input:focus,
 select:focus,
 textarea:focus {
-  /* outline: none; */
   background-color: #90c7e3;
 }
 
 @media (max-width: 400px) {
   #table-members {
     min-width: 100%;
+  }
+}
+
+@media (min-width: 400px) {
+  header img {
+    width: 30%;
   }
 }
 
@@ -450,6 +453,10 @@ textarea:focus {
 
   header {
     margin-top: 1rem;
+  }
+
+  header img {
+    width: 45%;
   }
 
   main {
@@ -647,6 +654,10 @@ textarea:focus {
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: 25% 75%;
+  }
+
+  header img {
+    width: 60%;
   }
 
   footer {
