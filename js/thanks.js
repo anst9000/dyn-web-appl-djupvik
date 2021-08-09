@@ -1,11 +1,7 @@
-// import { fetchWeatherForecast } from "./fetch.js";
-
 // Några variabler och konstanter deklareras globalt
 // för att kunna nå dem genom hela filen.
 let ARTICLE;
 let formData;
-
-// const TABLEDATA = `<td></td>`;
 
 const grepElements = (name, url = window.location.href) => {
   ARTICLE = document.getElementById("thanks");

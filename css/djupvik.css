@@ -33,14 +33,11 @@ main {
   width: 100%;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans light";
 }
 
-h2,
-h3 {
+h2, h3, h4, h5, h6 {
   color: rgb(30, 14, 0);
 }
 
@@ -50,14 +47,15 @@ h1 {
 }
 
 h2 {
+  text-align: center;
   font-size: 1.8rem;
   margin: 2rem 0 2rem;
 }
 
 h3 {
   font-size: 1.6rem;
-  margin-bottom: 1rem;
-  padding-top: 1.8rem;
+  margin: 1.5rem 0;
+  padding: 0;
 }
 
 p {
@@ -122,6 +120,11 @@ img[alt="Logo"] {
   width: 25%;
 }
 
+
+a:focus, a:hover {
+  outline: 1px solid black;
+}
+
 /* NAV */
 nav ul {
   display: flex;
@@ -131,7 +134,7 @@ nav ul {
 
 nav ul li {
   width: 40%;
-  padding: 0.75rem;
+  padding-bottom: 1rem;
   margin: 0 auto;
 }
 
@@ -155,13 +158,7 @@ nav a:active {
   letter-spacing: 0.1rem;
 }
 
-nav a:focus {
-  outline: none;
-}
-
 #activePage {
-  /* color: #ffd700;
-  color: rgb(227, 212, 225); */
   font-family: "Roboto Bold";
   color: rgb(30, 14, 0);
   border-bottom: 4px solid rgb(30, 14, 0);
@@ -171,11 +168,13 @@ main {
   width: 100%;
 }
 
-article#english {
+#english-text,
+#english-header {
   display: none;
 }
 
-article#swedish {
+#swedish-text,
+#swedish-header {
   display: block;
 }
 
@@ -209,11 +208,13 @@ article header {
   display: grid;
   align-items: center;
   grid-template-columns: 3fr 1fr;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
   line-height: 1.5;
-  margin-bottom: 1rem;
 }
 
 footer {
@@ -235,15 +236,26 @@ p small {
   margin: 0;
 }
 
-table {
+#table-members {
   margin: 0 auto 3rem auto;
 }
+#table-guests {
+  margin: 0 auto;
+}
 
-caption {
-  display: block;
-  float: left;
+#caption {
   font-size: 0.75rem;
   margin-top: 0.75rem;
+  text-align: center;
+}
+
+#weather-forecast {
+  display: flex;
+}
+
+#select-weather {
+  text-align: center;
+  margin: 2rem auto;
 }
 
 #show-weather-forecast {
@@ -280,8 +292,31 @@ caption {
   border: 1px solid #DDDDDD;
 }
 
+.news {
+  margin: 0;
+  width: 100%;
+}
+
+.news h4, h5 {
+  display: inline-block;
+  background-color: lightgrey;
+  padding: 4px;
+}
+
+.news h4:first-child {
+  margin-top: 2rem;
+}
+
+.news p {
+  margin: 1rem auto;
+}
+.news p:last-child {
+  margin-bottom: 3rem;
+}
+
 .history {
   font-style: italic;
+  margin-top: 0.75rem;
 }
 
 #history-image-konrad {
@@ -292,20 +327,19 @@ h4 span {
   font-weight: bold;
 }
 
-#name-explanation, #harbor-master {
+#name-explanation ul, #harbor-master {
   margin-top: 0.75rem;
   width: 100%;
   box-shadow: 2px 2px 10px grey;
   background-color: #f1f1f1;
-  /* margin: 1rem auto 2rem auto; */
-  /* padding-top: 1.5rem; */
 }
-#name-explanation ul, #harbor-master ul {
+
+#name-explanation ul, #harbor-master {
   list-style-type: none;
   padding: 0;
 }
 
-#name-explanation ul li, #harbor-master ul li {
+#name-explanation ul li, #harbor-master li {
   padding: 5px 10px;
   background-color: #EEEEEE;
   border: 1px solid #DDDDDD;
@@ -344,7 +378,6 @@ input[type="reset"] {
   }
 
   th {
-    /* font-weight: bold; */
     background-color: #6aa6cc;
   }
 
@@ -356,12 +389,7 @@ input[type="reset"] {
     background-color: #f5fafc;
   }
 
-
-
 /* TACK-sidan */
-#thanks {
-}
-
 #thanks ul {
   margin-top: 0.75rem;
   width: 100%;
@@ -386,13 +414,13 @@ input[type="reset"] {
 input:focus,
 select:focus,
 textarea:focus {
-  outline: none;
+  /* outline: none; */
   background-color: #90c7e3;
 }
 
-@media (min-width: 400px) {
-  #table-members td {
-    text-align: center;
+@media (max-width: 400px) {
+  #table-members {
+    min-width: 100%;
   }
 }
 
@@ -429,7 +457,8 @@ textarea:focus {
   h3 {
     font-size: 2.0rem;
     margin-bottom: 1rem;
-    padding-top: 1.8rem;
+    margin: 0;
+    padding: 0;
   }
 
   p {
@@ -448,7 +477,8 @@ textarea:focus {
   }
 
   figcaption {
-    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-size: 1.0rem;
     text-align: center;
   }
 
@@ -465,31 +495,6 @@ textarea:focus {
 
   footer {
     margin-top: 0;
-  }
-
-  /* Tabellen på guest-sidan */
-  table {
-    width: 100%;
-    max-width: 600px;
-  }
-
-  td,
-  th {
-    border: 1px solid #006599;
-    padding: 0.3rem;
-  }
-
-  th {
-    /* font-weight: bold; */
-    background-color: #6aa6cc;
-  }
-
-  td {
-    text-align: center;
-  }
-
-  tr:nth-of-type(even) {
-    background-color: #f5fafc;
   }
 }
 
@@ -511,9 +516,17 @@ textarea:focus {
     width: 75%;
   }
 
+  th {
+    font-weight: bold;
+  }
 }
 
 @media (max-width: 830px) {
+  table {
+    width: 100%;
+    max-width: 600px;
+  }
+
   table,
   thead,
   tbody,
@@ -529,22 +542,43 @@ textarea:focus {
     left: -9999px;
   }
 
+  td,
   th {
-    /* font-weight: bold; */
+    border: 1px solid #006599;
+    padding: 7px;
+  }
+
+  th {
     background-color: #6aa6cc;
     border: 1px solid #006599;
+    font-weight: bold;
+    font-size: 1.1rem;
     padding: 0.3rem;
+  }
+
+  td {
+    text-align: center;
+    font-size: 1.0rem;
   }
 
   tr {
     border: 1px solid #3399cc;
   }
 
+  tr:nth-of-type(even) {
+    background-color: #f5fafc;
+  }
+
   #table-guests {
     width: 90%;
   }
 
-  #table-guests td {
+  #table-members {
+    width: 85%;
+  }
+
+  #table-guests td,
+  #table-members td {
     position: relative;
     padding-left: 50%;
     text-align: right;
@@ -552,13 +586,14 @@ textarea:focus {
     padding: 0.3rem;
   }
 
-  #table-guests td:before {
+  #table-guests td:before,
+  #table-members td:before {
     position: absolute;
     top: 6px;
     left: 6px;
     width: 45%;
     padding-right: 10px;
-    white-space: no-wrap;
+    white-space: nowrap;
     text-align: left;
   }
 
@@ -665,7 +700,8 @@ textarea:focus {
   }
 
   figcaption {
-    font-size: 0.8rem;
+    margin-top: 0.7rem;
+    font-size: 1.1rem;
     text-align: center;
   }
 
@@ -675,13 +711,16 @@ textarea:focus {
     margin: auto auto;
   }
 
+  th, td {
+    padding: 7px;
+  }
+
   th {
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   td {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
-
 }
