@@ -10,10 +10,20 @@
   margin-bottom: 2rem;
 }
 
-.no-value tr {
-  background-color: rgba(154, 42, 42, 0.625);
-  text-decoration: line-through;
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
 }
+
+section #smhi-widget,
+section #weather-forecast {
+  margin-bottom: 2rem;
+}
+
+section #weather-forecast h4 {
+  margin-bottom: 0.5rem;
+}
+
 
 .weather-table caption {
   font-size: 1.1rem;
@@ -92,7 +102,7 @@ select {
   #weather-forecast {
     display: block;
     align-items: center;
-    margin-top: 0 auto;
+    margin: 0 auto;
     width: 75%;
   }
 

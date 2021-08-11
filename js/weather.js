@@ -6,6 +6,7 @@ let WX_WIDGET;
 let WX_TABLE;
 let SELECT_WX;
 let SHOW_WX;
+let WEATHER_FORECAST;
 let weatherForecast = [];
 let tableToday;
 let tableTomorrow;
@@ -27,6 +28,7 @@ const grepElements = () => {
   WX_WIDGET = document.getElementById("smhi-widget");
   SELECT_WX = document.getElementById("select-weather");
   SHOW_WX = document.getElementById("show-weather-forecast");
+  WEATHER_FORECAST = document.getElementById('weather-forecast')
 };
 
 const addListeners = () => {
@@ -103,6 +105,9 @@ const getTomorrowsDate = () => {
 }
 
 const preloadTableStructure = () => {
+  let h4 = createElement('h4', 'Vädertabeller för idag och i morgon')
+  WX_WIDGET.appendChild(h4)
+
   let tableToday = document.createElement('table')
   tableToday.classList.add("weather-table")
   tableToday.setAttribute('id', 'today')
@@ -176,7 +181,7 @@ const fillWeatherTables = (wxInfo) => {
   }
 
   // Kolla om det finns några prognoser kvar att kolla idag
-  if (forecastTime >= "19.00" && weatherLeftForToday) {
+  if (forecastTime >= "18.00" && weatherLeftForToday) {
     weatherLeftForToday = false;
     todaysDate = forecastDate;
     return;
@@ -231,6 +236,12 @@ const writeTimeNow = () => {
   weatherHeader.innerText = `Väder - klockan är nu: ${time}`
 }
 
+const createElement = (element, text) => {
+  let el = document.createElement(element)
+  el.textContent = text;
+
+  return el;
+}
 
 // Det här är main-funktionen
 const main = () => {
