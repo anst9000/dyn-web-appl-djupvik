@@ -13,6 +13,7 @@
     />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/djupvik.css" />
+    <link rel="stylesheet" href="../css/weather.css" />
     <link rel="icon" href="../assets/images/logos/favicon.ico" type="image/ico" />
     <title>Gästhamnen - Djupviks Hamn</title>
   </head>
@@ -38,20 +39,12 @@
       </aside>
 
       <main>
-        <img
-          id="guests-img-lg"
-          src="../assets/images/small/D-12-md.png"
-          alt="Gästhamnen i Djupviks hamn"
-          width="1232"
-          height="816"
-        />
-        <img
-          id="guests-img-sm"
-          src="../assets/images/small/D-12-xs.png"
-          alt="Gästhamnen i Djupviks hamn"
-          width="616"
-          height="408"
-        />
+
+        <picture>
+          <source media="(min-width: 1021px)" srcset="../assets/images/small/D-12-lg.png">
+          <source media="(min-width: 830px) and (max-width: 1020px)" srcset="../assets/images/small/D-12-md.png">
+          <img src="../assets/images/small/D-12-sm.png" alt="Gamla hus i Djupvik" style="width:auto;">
+        </picture>
 
         <section id="main-section">
           <h2>Gästhamnen</h2>
@@ -106,12 +99,16 @@
           </article>
 
           <article>
-            <h3 id="weather-forecast-header">Väderprognos</h3>
-            <p id="weather-forecast">
+            <h3 id="weather-forecast-header">Väder</h3>
+            <section id="smhi-widget"></section>
+
+            <section id="weather-forecast">
+              <label for="select-weather">Välj en prognos</label>
+              <br>
               <select name="select-weather-forecast" id="select-weather" required>
                 <option value="" selected disabled>Välj en prognos</option>
               </select>
-            </p>
+            </section>
 
             <section id="show-weather-forecast">
               <h4><span>Välj en tidpunkt ovan</span></h4>

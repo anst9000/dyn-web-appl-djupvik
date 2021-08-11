@@ -1,0 +1,157 @@
+#smhi-widget {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  ;
+}
+
+#today,
+#tomorrow {
+  margin-bottom: 2rem;
+}
+
+.no-value tr {
+  background-color: rgba(154, 42, 42, 0.625);
+  text-decoration: line-through;
+}
+
+.weather-table caption {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+}
+
+.weather-table th, .weather-table td {
+  padding: 10px;
+}
+.weather-table td img {
+  width: 25px;
+  height: 25px;
+  display: inline;
+  vertical-align: middle;
+}
+
+#weather-forecast {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#select-weather {
+  text-align: center;
+  margin: 0 auto 1rem auto;
+}
+
+#show-weather-forecast {
+  max-width: 90%;
+  box-shadow: 2px 2px 10px grey;
+  background-color: #f1f1f1;
+  margin: 1.5rem auto;
+  padding-top: 1.5rem;
+}
+
+#show-weather-forecast h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+#show-weather-forecast p {
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+}
+
+#show-weather-forecast span {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  font-size: 1.1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+select {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 250px) and (max-width: 830px) {
+  .weather-table {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  #weather-forecast {
+    display: block;
+    align-items: center;
+    margin-top: 0 auto;
+    width: 75%;
+  }
+
+
+  label {
+    display: block;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-bottom: -0.5rem;
+    font-weight: bold;
+    text-align: left;
+  }
+
+
+  .weather-table td img {
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin-right: 0;
+  }
+
+  .weather-table td {
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+    border: 1px solid #006599;
+    padding: 10px;
+  }
+
+  .weather-table td:before {
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  .weather-table td:nth-of-type(1):before {
+    content: "Klockan";
+  }
+
+  .weather-table td:nth-of-type(2):before {
+    content: "Temperatur";
+  }
+
+  .weather-table td:nth-of-type(3):before {
+    content: "Vindriktning";
+  }
+
+  .weather-table td:nth-of-type(4):before {
+    content: "Himmel";
+  }
+
+  .weather-table td img {
+    display: inline;
+  }
+}

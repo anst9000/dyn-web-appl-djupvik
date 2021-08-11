@@ -47,8 +47,8 @@ export const fetchWeatherForecast = async () => {
     localStorage.setItem("wxData", JSON.stringify(data))
   }
 
-  // Använd data för 12 timmar framåt
-  parseData(data.timeSeries.slice(0, 12));
+  // Använd data för 48 timmar framåt
+  parseData(data.timeSeries.slice(0, 48));
 
   // Returnera arrayen med 'tillplattade' objekt.
   return weatherArray;
@@ -106,6 +106,7 @@ const parseData = (forecasts) => {
 
       wxSymbol: weatherSymbolList[wxSymbolValue],
       temp: tempValue,
+      windDirValue,
       windDir: degToCompass(windDirValue),
       windSpeed: windSpeedValue,
       gustSpeed: gustSpeedValue,

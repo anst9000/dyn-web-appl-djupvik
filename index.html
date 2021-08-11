@@ -41,21 +41,11 @@
 
       <main>
 
-        <img
-          id="main-img-lg"
-          src="./assets/images/small/D-6-xs.png"
-          alt="Gamla hus i Djupvik"
-          width="1620"
-          height="735"
-        />
-
-        <img
-          id="main-img-sm"
-          src="./assets/images/small/D-6-sm.png"
-          alt="Gamla hus i Djupvik"
-          width="739"
-          height="490"
-        />
+        <picture>
+          <source media="(min-width: 1021px)" srcset="./assets/images/small/D-6-lg.png">
+          <source media="(min-width: 830px) and (max-width: 1020px)" srcset="./assets/images/small/D-6-md.png">
+          <img src="./assets/images/small/D-6-sm.png" alt="Gamla hus i Djupvik" style="width:auto;">
+        </picture>
 
         <section id="main-section">
           <h2 id="swedish-header">Djupviks Hamn</h2>

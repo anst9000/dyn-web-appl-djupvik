@@ -77,18 +77,18 @@ figcaption {
   font-size: 0.8rem;
 }
 
-#main-img-sm {display:block;}
-#main-img-lg {display:none}
-#guests-img-sm {display:block;}
-#guests-img-lg {display:none}
-#attractions-img-sm {display:block;}
-#attractions-img-lg {display:none}
-#contact-img-sm {display:block;}
-#contact-img-lg {display:none}
-#members-img-sm {display:block;}
-#members-img-lg {display:none}
-#history-img-sm {display:block;}
-#history-img-lg {display:none}
+/* #main-img-sm {display:block;}
+#main-img-lg {display:none} */
+/* #guests-img-sm {display:block;}
+#guests-img-lg {display:none} */
+/* #attractions-img-sm {display:block;}
+#attractions-img-lg {display:none} */
+/* #contact-img-sm {display:block;}
+#contact-img-lg {display:none} */
+/* #members-img-sm {display:block;}
+#members-img-lg {display:none} */
+/* #history-img-sm {display:block;}
+#history-img-lg {display:none} */
 
 aside {
   background-color: #d08b2c;
@@ -207,6 +207,10 @@ article {
   margin-top: 4rem;
 }
 
+article ul {
+  margin-bottom: 1rem;
+}
+
 .header-h3 {
   grid-area: h3;
 }
@@ -266,38 +270,6 @@ p small {
   font-size: 0.75rem;
   margin-top: 0.75rem;
   text-align: center;
-}
-
-#weather-forecast {
-  display: flex;
-}
-
-#select-weather {
-  text-align: center;
-  margin: 2rem auto;
-}
-
-#show-weather-forecast {
-  max-width: 90%;
-  box-shadow: 2px 2px 10px grey;
-  background-color: #f1f1f1;
-  margin: 1rem auto 2rem auto;
-  padding-top: 1.5rem;
-}
-
-#show-weather-forecast h4 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
-}
-#show-weather-forecast p {
-  font-size: 1.1rem;
-  margin: 0;
-  padding: 0 0 0 1.5rem;
-}
-
-#show-weather-forecast span {
-  font-weight: bold;
 }
 
 .attraction-list {
@@ -527,18 +499,18 @@ textarea:focus {
 }
 
 @media (min-width: 830px) {
-  #main-img-sm {display:none;}
-  #main-img-lg {display:block}
-  #guests-img-sm {display:none;}
-  #guests-img-lg {display:block}
-  #attractions-img-sm {display:none;}
-  #attractions-img-lg {display:block}
-  #contact-img-sm {display:none;}
-  #contact-img-lg {display:block}
-  #members-img-sm {display:none;}
-  #members-img-lg {display:block}
-  #history-img-sm {display:none;}
-  #history-img-lg {display:block}
+  /* #main-img-sm {display:none;}
+  #main-img-lg {display:block} */
+  /* #guests-img-sm {display:none;}
+  #guests-img-lg {display:block} */
+  /* #attractions-img-sm {display:none;}
+  #attractions-img-lg {display:block} */
+  /* #contact-img-sm {display:none;}
+  #contact-img-lg {display:block} */
+  /* #members-img-sm {display:none;}
+  #members-img-lg {display:block} */
+  /* #history-img-sm {display:none;}
+  #history-img-lg {display:block} */
 
   #table-guests {
     width: 75%;

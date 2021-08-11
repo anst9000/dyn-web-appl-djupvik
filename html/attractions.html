@@ -39,21 +39,11 @@
 
       <main>
 
-        <img
-          id="attractions-img-lg"
-          src="../assets/images/small/D-24-lg.png"
-          alt="Utsikt över vacker kust"
-          width="1478"
-          height="979"
-        />
-
-        <img
-          id="attractions-img-sm"
-          src="../assets/images/small/D-24-sm.png"
-          alt="Utsikt över vacker kust"
-          width="739"
-          height="490"
-        />
+        <picture>
+          <source media="(min-width: 1021px)" srcset="../assets/images/small/D-24-lg.png">
+          <source media="(min-width: 830px) and (max-width: 1020px)" srcset="../assets/images/small/D-24-md.png">
+          <img src="../assets/images/small/D-24-sm.png" alt="Utsikt över vacker kust" style="width:auto;">
+        </picture>
 
         <section id="main-section">
           <h2>Turistmål i närheten</h2>
