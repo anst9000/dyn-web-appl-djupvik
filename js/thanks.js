@@ -7,6 +7,7 @@ const grepElements = (name, url = window.location.href) => {
   ARTICLE = document.getElementById("thanks");
 };
 
+// Funktionen hämtar all data från formuläret.
 const getFormData = () => {
   const firstName = getParameterByName('firstName')
   const lastName = getParameterByName('lastName')
@@ -17,14 +18,17 @@ const getFormData = () => {
   const type = getParameterByName('type')
   const contact = getParameterByName('contact')
 
+  // Skapar ett objekt av formData så att det är lättare att hålla reda på det.
   formData = { firstName, lastName, heading, description, email, phone, type, contact }
 }
 
+// En funktion som hämtar innehållet i efterfrågat form-element.
 const getParameterByName = (name) => {
     var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
     return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
 }
 
+// Skriv ut den inmatade informationen på thanks-sidan.
 const printInformation = () => {
   ARTICLE.innerHTML = `
   <h3>Din information</h3>

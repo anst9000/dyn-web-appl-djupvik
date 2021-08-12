@@ -1,3 +1,4 @@
+// Vi behöver några hjälptabeller från convertTables.js
 import {
   dayHoursList,
   precipitationCategoryList,
@@ -6,10 +7,12 @@ import {
   getWxSymbolImage
 } from './convertTables.js'
 
+// Den URL som vi hämtar väderdata ifrån.
 const URL = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/18.1489/lat/57.3081/data.json"
 
 let weatherArray = [];
 
+// Kollar om det finns data lagrat i localStorage eller inte.
 const hasData = () => {
   if (localStorage.getItem("wxData") === null) {
     return false
@@ -18,6 +21,9 @@ const hasData = () => {
   }
 }
 
+// Kollar om datat från SMHI är uppdaterat eller inte.
+// SMHI skickar med data.referenceTime som är senaste
+// tiden som de uppdaterat vädret.
 const isFreshData = () => {
   let data = JSON.parse(localStorage.getItem("wxData"))
 
@@ -63,6 +69,9 @@ const parseData = (forecasts) => {
       windSpeedValue, gustSpeedValue, visibilityValue,
       precipitationCategoryValue, precipitaionMeanIntensityValue;
 
+  // Ett problem var att egenskaperna från API:et inte alltid ligger
+  // i samma ordning i den lista som returneras från API.
+  // Därför var det smidigt med en switch-sats som kollar det som av intresse.
   forecasts.map((forecast) => {
     forecast.parameters.forEach(wx => {
       switch (wx.name) {
@@ -98,6 +107,9 @@ const parseData = (forecasts) => {
 
     let date = new Date(forecast.validTime)
 
+    // Nu finns det med data som kanske inte kommer användas i tabellerna,
+    // men det var enklare att lägga med de flesta egenskaper här i fetch.js
+    // än att upptäcka att nu saknar jag det attributet när man ska kör mot DOM.
     let wxInfo = {
       time: forecast.validTime,
       forecastDate: date.toLocaleDateString(),

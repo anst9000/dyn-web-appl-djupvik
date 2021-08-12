@@ -50,6 +50,9 @@
           <h3>Tveka inte att kontakta oss.</h3>
           <p>Fält markerade med * måste fyllas i.</p>
 
+          <!-- Formuläret skickar data till sidan thanks.html genom GET,  -->
+          <!-- så att man kan hämta informationen genom querystringparameter. -->
+          <!-- Hade vi haft Express-server så hade vi kunnat köra med POST och använda datat -->
           <form id="contact-form" method="get" action="thanks.html">
             <p>
               <label for="FirstName">Förnamn*:</label>
