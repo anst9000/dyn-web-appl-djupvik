@@ -172,7 +172,7 @@ const fillWeatherTables = (wxInfo) => {
   }
 
   // Kolla om det finns några prognoser kvar att kolla för idag.
-  if (forecastTime >= "18.00" && weatherLeftForToday) {
+  if (forecastTime >= "19.00" && weatherLeftForToday) {
     weatherLeftForToday = false;
     todaysDate = forecastDate;
     return;
