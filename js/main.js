@@ -16,16 +16,16 @@ const grepElements = () => {
 
 const addListeners = () => {
 
+  // Om man har klickat på swedishBtn ska den svenska texten visas.
   swedishBtn.addEventListener('click', () => {
-    console.log('clicked swedish button')
     swedishText.style.display = "block";
     englishText.style.display = "none";
     swedishHeader.style.display = "block";
     englishHeader.style.display = "none";
   })
 
+  // Om man har klickat på englishBtn ska den engelska texten visas.
   englishBtn.addEventListener('click', () => {
-    console.log('clicked english button')
     englishText.style.display = "block";
     swedishText.style.display = "none";
     englishHeader.style.display = "block";
@@ -38,8 +38,6 @@ const main = () => {
   removeEventListener("load", main);
   grepElements();
   addListeners();
-
-  // time.textContent = `Time: ${timeleft}`;
 };
 
 addEventListener("load", main);
